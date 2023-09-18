@@ -9,4 +9,10 @@
     <string name="main_interest_1">Interest 1</string>
     <string name="main_interest_2">Interest 2</string>
 
+    <string name="pro_name">Name :</string>
+    <string name="pro_age">Age :</string>
+    <string name="pro_gender">Gender :</string>
+    <string name="pro_interest">Interests :</string>
+    <string name="pro_sub">Complete Submission</string>
+
 </resources>
