@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Create_A_Profile_App</string>
+
+    <string name="main_sub_btn">Submit</string>
+    <string name="main_name">What\'s your name?</string>
+    <string name="main_age">What\'s your age?</string>
+    <string name="main_male">Male</string>
+    <string name="main_female">Female</string>
+    <string name="main_interest_1">Interest 1</string>
+    <string name="main_interest_2">Interest 2</string>
+
 </resources>
