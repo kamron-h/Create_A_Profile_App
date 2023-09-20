@@ -13,7 +13,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="92dp"
         android:text="@string/app_name"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -26,10 +27,9 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginStart="23dp"
         app:layout_constraintBottom_toTopOf="@+id/checkbox1"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <RadioButton
@@ -52,15 +52,15 @@
         android:text="@string/main_interest_1"
         app:layout_constraintBottom_toTopOf="@+id/checkbox2"
         app:layout_constraintEnd_toEndOf="@+id/checkbox2"
-        app:layout_constraintStart_toStartOf="@+id/checkbox2"
+        app:layout_constraintStart_toStartOf="@+id/radio_group"
         app:layout_constraintTop_toBottomOf="@+id/radio_group" />
 
     <CheckBox
         android:id="@+id/checkbox2"
         android:layout_width="238dp"
         android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="83dp"
         android:text="@string/main_interest_2"
         app:layout_constraintBottom_toTopOf="@+id/profile_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
         android:id="@+id/profile_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="117dp"
         android:text="@string/main_sub_btn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,11 +79,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="17dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,10 +98,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/radio_group"
         app:layout_constraintEnd_toEndOf="parent"

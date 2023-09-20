@@ -15,75 +15,85 @@
         android:text="@string/pro_sub"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestCheckboxTextView" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="89dp"
+        app:layout_constraintEnd_toStartOf="@+id/switch1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/profile_user" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="84dp"
         android:minHeight="48dp"
         android:text="Switch"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nameTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="326dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/pro_name"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ageTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/genderTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
     <TextView
         android:id="@+id/ageTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="341dp"
-        android:layout_marginBottom="297dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/pro_age"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/genderTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameTextView"
+        app:layout_constraintStart_toStartOf="@+id/genderTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
     <TextView
         android:id="@+id/interestCheckboxTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_width="292dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="103dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/ageTextView"
-        app:layout_constraintStart_toStartOf="@+id/ageTextView"
-        app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+        app:layout_constraintBottom_toTopOf="@+id/home_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderTextView"
+        tools:text="sdgsdfg" />
 
     <TextView
         android:id="@+id/genderTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:text="dfgsdfg"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interestCheckboxTextView" />
+        app:layout_constraintBottom_toTopOf="@+id/interestCheckboxTextView"
+        app:layout_constraintEnd_toEndOf="@+id/interestCheckboxTextView"
+        app:layout_constraintStart_toStartOf="@+id/interestCheckboxTextView"
+        app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

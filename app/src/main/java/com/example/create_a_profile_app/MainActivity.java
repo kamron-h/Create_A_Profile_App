@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -22,20 +22,23 @@ public class MainActivity extends AppCompatActivity {
 
         Button profile_button = findViewById(R.id.profile_button);
 
-        TextInputEditText name_input_widget = findViewById(R.id.name_input);
-        TextInputEditText age_input_widget = findViewById(R.id.age_input);
-        RadioGroup radio_group_widget = findViewById(R.id.radio_group);
-        CheckBox checkbox1_widget = findViewById(R.id.checkbox1);
-        CheckBox checkbox2_widget = findViewById(R.id.checkbox2);
-
         profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                TextInputEditText name_input_widget = findViewById(R.id.name_input);
+                TextInputEditText age_input_widget = findViewById(R.id.age_input);
+//                RadioGroup selectedRadioId = findViewById(R.id.radio_group);
+                RadioGroup radioGroup = findViewById(R.id.radio_group);
+                CheckBox checkbox1_widget = findViewById(R.id.checkbox1);
+                CheckBox checkbox2_widget = findViewById(R.id.checkbox2);
+
                 // Get the input data
                 String name = name_input_widget.getText().toString();
                 String age = age_input_widget.getText().toString();
-                int selectedRadioId = radio_group_widget.getCheckedRadioButtonId();
+                // Get the selected radio button option
+                int selectedRadioId = radioGroup.getCheckedRadioButtonId();
+                String selectedOption = "";
                 boolean isCheckedCheckbox1 = checkbox1_widget.isChecked();
                 boolean isCheckedCheckbox2 = checkbox2_widget.isChecked();
 
@@ -47,12 +50,18 @@ public class MainActivity extends AppCompatActivity {
                     age = "11"; // Default value if the age is empty
                 }
 
+                // Radio Button
+                if (selectedRadioId != -1) {
+                    RadioButton selectedRadioButton = findViewById(selectedRadioId);
+                    selectedOption = selectedRadioButton.getText().toString();
+                }
+
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
 
                 // Pass the input data as extras to the intent
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
-                intent.putExtra("selectedRadioId", selectedRadioId);
+                intent.putExtra("selectedOption", selectedOption);
                 intent.putExtra("isCheckedCheckbox1", isCheckedCheckbox1);
                 intent.putExtra("isCheckedCheckbox2", isCheckedCheckbox2);
 
